@@ -1,0 +1,75 @@
+// OPERADORES ARITMÉTICOS
+
+/*
+
++ Adição | Concatenação
+- Subtração
+* Multiplicação
+/ Divisão
+** Potenciação
+% Resto da divisão
+
+*/
+
+// Adição
+const num1 = 5;
+const num2 = 10;
+console.log(num1 + num2);
+// 15
+
+// Concatenação
+const num3 = '5'
+const num4 = 10;
+console.log(num3 + num4);
+// 510
+
+// Subtração
+const num5 = 5
+const num6 = 10;
+console.log(num6 - num5);
+// -5
+
+// Multiplicação
+const num7 = 5
+const num8 = 10;
+console.log(num7 * num8);
+// 50
+
+// Divisão
+const num9 = 5
+const num10 = 10;
+console.log(num9 / num10);
+// 0.5
+
+// Potenciação
+const num11 = 5
+const num12 = 10;
+console.log(num11 ** num12);
+// 9765625
+
+// Resto da divisão
+const num13 = 5
+const num14 = 10;
+console.log(num11 % num12);
+// 5
+
+// Usando todos juntos
+const num15 = 5;
+const num16 = 10;
+const num17 = 2;
+const num18 = 8;
+const num19 = 3;
+const num20 = 7;
+const num21 = 4;
+console.log(num15 + num16 - num17 * num18 / num19 ** num20 % num21);
+// 14.992684042066758
+
+/*
+
+ORDEM DE REALIZAÇÃO DA CONTA:
+()
+**
+* / %
++ -
+
+*/

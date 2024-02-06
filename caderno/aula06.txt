@@ -1,0 +1,91 @@
+---------------------------------------------------------------
+podemos declarar variáveis usando LET e VAR, porém foi 
+não foi explicado a diferença entre as duas ainda, apenas
+que VAR é uma forma antiga de declarar variável
+---------------------------------------------------------------
+
+podemos declarar uma variável e dar o seu valor imediatamente
+
+let nome = 'Cleito';
+---------------------------------------------------------------
+
+ou
+
+---------------------------------------------------------------
+podemos declarar ela, e dar um valor pra ela em outro momento
+
+let name;
+name = "João";
+console.log(name);
+name = "Otávio"
+console.log(name)
+
+---------------------------------------------------------------
+não podemos redeclarar variáveis, por exemplo:
+
+let name;
+name = "João";
+console.log(name);
+
+let name;
+
+---------------------------------------------------------------
+Não podemos criar variáveis com palavras reservadas
+
+exemplo: let if | let let | let var
+
+----------------
+
+Variáveis precisam ter nomes significativos:
+
+exemplo: usar uma letra apenas pra declarar variável, quando 
+estiver em um grande projeto se confundirá sobre a que pertence
+aquela letra, por exemplo uma variavel com o NOME do CLIENTE, 
+ao invés de declara-la como: 
+
+let n = "João";
+
+deve-se declarar:
+
+let nomeCliente = "João";
+
+para um melhor entendimento
+
+----------------
+
+Não pode começar o nome de uma variável com um número:
+
+exemplo: no1me;
+
+----------------
+
+Não pode conter espaços ou traços:
+
+exemplo: let nome Cliente;
+
+----------------
+
+Para resolver problema de varias palavras pra variável
+utilizamos camelCase:
+
+exemplo:
+let nomeCompletoDoCliente = 'Luiz otavio';
+let tarifasDoMesDeMaio;
+
+----------------
+
+Letras maiúsculas e minúsculas fazem diferença na hora de chamar 
+uma variável, o nome disso é Case-sensitive
+
+exemplo:
+let nomeCliente = 'Luiz';
+let nomecliente = 'Daniel';
+
+são duas variáveis diferentes
+
+----------------
+
+Não utilize var, utilize let, quando você achar que o valor da
+sua variável possa se alterar
+
+---------------------------------------------------------------

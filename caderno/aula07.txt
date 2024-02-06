@@ -1,0 +1,26 @@
+Todas as regras do let também se encaixam na const,
+porém com duas adições:
+
+// Não podemos declarar uma constante sem dar valor a ela
+// Não podemos modificar o valor de uma constante
+
+-------------------------------------------------------------
+
+Ao invés de substituirmos o valor de uma variável
+é mais interessante criar uma nova variável e apenas
+evoluir o valor da variável anterior
+
+let resultadoTriplicado = resultaDuplicado + resultado
+resultadoTriplicado = resultadoTriplicado + 5 // <= Errado
+
+-------------------------------------------------------------
+
+Podemos descobrir a classe de uma variável usando
+a função typeof dentro do console
+
+console.log(typeof(primeiroNumero));
+console.log(typeof(nome));
+
+console.log(typeof(primeiroNumero + nome));
+
+-------------------------------------------------------------

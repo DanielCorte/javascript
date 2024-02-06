@@ -1,0 +1,27 @@
+Faça varA receber valor de varB |
+Faça varB receber valor de varC |
+Faça varC receber valor de varA
+
+--------------------------------------------------------------------------
+let varA = 'A'; // B
+let varB = 'B'; // C
+let varC = 'C'; // A
+
+FORMA CLASSICA
+
+let varAA = varA
+varA = varB
+varB = varC
+varC = varAA
+
+
+FORMA MODERNA
+
+[varA, varB, varC] = [varB, varC, varA]
+
+
+console.log(varA, varB, varC)
+
+// Tomar cuidado pois a segunda forma deixa implícito a intenção do nosso
+programa, em grande escala pode deixar o código confuso, e devemos sempre
+lembrar que ESTAMOS CODANDO PARA PESSOAS LEREM E NÃO COMPUTADORES!!!

@@ -1,0 +1,21 @@
+TEMPLATE STRINGS:
+
+Uma forma mais organizada e semântica de criar um console log, usando
+crazes no lugar das aspas, e colocando as variveis dentro das crazes,
+porém envelopadas por um ${}, segue exemplo abaixo:
+
+--------------------------------------------------------------------------
+Sem template strings:
+
+console.log(nome, sobrenome, 'tem', idade, 'anos, pesa', peso, 'kg');
+console.log('tem', alturaEmM, 'de altura e seu IMC é de', indiceMassaCorporal);
+console.log(nome, sobrenome, 'nasceu em', anoNascimento);
+
+--------------------------------------------------------------------------
+Com template strings:
+
+console.log(`${nome} ${sobrenome} tem ${idade} anos e pesa ${peso + 'kg'}`);
+console.log(`tem ${alturaEmM + 'm'} de altura e seu IMC é de ${indiceMassaCorporal}`);
+console.log(`${nome} ${sobrenome} nasceu em ${anoNascimento + '.'}`);
+
+--------------------------------------------------------------------------
