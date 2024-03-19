@@ -1,0 +1,5 @@
+Nessa aula nós criamos o modelo base, que usaremos para as próximas
+aulas, contendo uma pasta assets, com uma pasta de img dentro, uma pasta
+de javascript e uma pasta de css, dentro da pasta modelo também criamos
+um html, o modelo base já foi criado, linkado e estilizado, e está pronto
+para ser usado.

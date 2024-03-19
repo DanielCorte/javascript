@@ -1,5 +1,7 @@
 :root {
     --primary-color: rgb(17, 86, 102);
+    --primary-color-darker: rgb(6, 40, 48);
+
 }
 
 * {
@@ -21,6 +23,7 @@ body {
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
 }
 
 form input, form label, form button {
@@ -46,6 +49,11 @@ form button {
     color: #fff;
     font-size: 18px;
     font-weight: 700;
-    height: 5;
+    height: 50px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--primary-color-darker);
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
