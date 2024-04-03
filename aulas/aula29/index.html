@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Calculate your BMI</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     
-    <div class="container">
+    <section class="container">
 
         <h1>BMI Categories</h1>
 
-        <div class="imc_div">
+        <div class="bmi_div">
 
             <h2>BMI</h2>
 
@@ -40,28 +40,20 @@
 
         <h1>Calculate your BMI</h1>
 
-        <form action="" class="form">
+        <form action="" id="form" method="post">
 
-            <label for="input-weight" class="weight">Weight (Kg):</label>
-            <input type="text" id="input-weight">
+            <label for="weight" >Weight (Kg):</label>
+            <input type="text" id="input-weight" name="weight">
 
-            <label for="input-height" class="height">Height (Meters):</label>
-            <input type="text" id="input-height">
+            <label for="height" >Height (Meters):</label>
+            <input type="text" id="input-height" name="height">
 
             <button type="submit">Submit</button>
         </form>
 
-        <div class="result_bmi">
+        <div class="result_bmi"></div>
 
-            <p class="valid_bmi"></p>
-
-            <p class="invalid_weight"></p>
-
-            <p class="invalid_height"></p>
-
-        </div>
-
-    </div>
+    </section>
 
     <script src="./assets/js/main.js"></script>
 </body>

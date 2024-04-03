@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root {
     --primary-color: rgb(17, 86, 102);
     --primary-color-darker: rgb(6, 40, 48);
+    --result-true-color: #69ec91;
+    --result-false-color: #e25858;
 
 }
 
@@ -26,12 +29,12 @@ body {
     border-radius: 10px;
 }
 
-.imc_div {
+.bmi_div {
     display: inline-block;
     padding-right: 25%;
 }
 
-.imc_div h2 {
+.bmi_div h2 {
     font-size: 1.3em;
 }
 
@@ -73,4 +76,12 @@ form button {
 form button:hover {
     background-color: var(--primary-color-darker);
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+
+.result-paragraph, .bad-result-paragraph {
+    background-color: var(--result-true-color);
+    padding: 10px 20px;
+}
+
+.bad-result-paragraph {
+    background-color: var(--result-false-color);
+}
