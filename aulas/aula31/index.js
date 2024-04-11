@@ -1,0 +1,46 @@
+const tresHoras = 60 * 60 * 3 * 1000 // seg * min * hora * ms
+const data = new Date(0); // 01/01/1970 Timestamp unix ou época unix
+console.log(data.toString()); // Wed Dec 31 1969 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+const data1 = new Date(0 + tresHoras); // É feito isso para mostrar o marco zero pois o horário do Brasil é 3 hora atrasado
+console.log(data1.toString()); // Thu Jan 01 1970 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+// FORMATO
+const data2 = new Date(2024, 3); // a, m, d, h, M, s, ms
+// No mínimo é necessário colocar pelo menos o ano e o mês, as outras informações são opcionais
+console.log(data.toString());
+
+// OUTRA FORMA DE COLOCAR DATA
+const data3 = new Date('2019-04-20T20:20:59.459');
+console.log(data3.toString()); // Sat Apr 20 2019 20:20:59 GMT-0300 (Horário Padrão de Brasília)
+
+console.log('Ano', data3.getFullYear());
+console.log('Mês', data3.getMonth() + 1); // Mês começa no zero
+console.log('Dia', data3.getDate());
+console.log('Hora', data3.getHours());
+console.log('Min', data3.getMinutes());
+console.log('Seg', data3.getSeconds());
+console.log('ms', data3.getMilliseconds());
+console.log('Dia semana', data3.getDay() + 1); // 0 - Domingo, 6 - Sábado
+
+console.log(Date.now()); // 1712807037499
+// Ele envia os ms do marco zero ate a data atual
+
+function ZeroAEsquerda (num) {
+    return num >= 10 ? num : `0${num}`;
+}
+
+function formataData(data) {
+    const dia = ZeroAEsquerda(data.getDate());
+    const mes = ZeroAEsquerda(data.getMonth() + 1);
+    const ano = ZeroAEsquerda(data.getFullYear());
+    const hora = ZeroAEsquerda(data.getHours());
+    const min = ZeroAEsquerda(data.getMinutes());
+    const seg = ZeroAEsquerda(data.getSeconds());
+
+    return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`
+}
+
+const data4 = new Date();
+const dataBrasil = formataData(data4);
+console.log(dataBrasil);

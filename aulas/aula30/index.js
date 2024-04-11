@@ -13,7 +13,7 @@ const nivelUsuario = pontuacaoUsuario >= 1000 ? "Usuário VIP" : "Usuário norma
 // (condicao) ? "Valor para verdadeiro" : "Valor para falso";
 
 const corUsuario = null;
-const corPadrao = corUsuario || 'Preta';
+const corPadrao = corUsuario || 'Preta'; // Valor padrão
 
 console.log(nivelUsuario, corPadrao) // Usuário normal Preta
 
