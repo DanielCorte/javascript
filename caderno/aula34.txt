@@ -1,0 +1,20 @@
+Nesta aula aprendemos sobre a função SWITCH, utilizada como uma opção no
+lugar do if qnd temos muitas tomadas de decisões para uma mesma variável
+
+Estrutura da função:
+
+switch () {
+case 0:	
+  xxxxxxxxx = 'xxxxxxxx';
+  break;
+case 1:	
+  xxxxxxxxx = 'xxxxxxxx';
+  break;
+case 2:	
+  xxxxxxxxx = 'xxxxxxxx';
+  break;
+default:
+  xxxxxxxxx = 'xxxxxxxx';
+}
+
+O default funciona como um else
