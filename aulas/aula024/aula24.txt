@@ -1,0 +1,97 @@
+Desafio: Criar um programa em JavaScript que receba dados html através
+de um formulário. Envie para objetos, e logo após organize os objetos em 
+arrays referente a cada cadastro diferente. Após isso ele deve enviar um 
+log para o console e mostrar na tela as informações de cadastro daquela 
+pessoa, sem que os dados sejam perdidos após o envio para o banco de dados.
+
+--------------------------------------------------------------------------
+# HTML 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <form class="form" action="" method="get">
+        <p>Nome: <input type="text" class="nome"></p>
+        <p>Sobrenome: <input type="text" class="sobrenome"></p>
+        <p>Peso: <input type="text" class="peso"></p>
+        <p>Altura: <input type="text" class="altura"></p>
+        <button>Enviar</button> <button type="reset">Limpar</button>
+    </form>
+
+    <div class="resultado">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+Explicação:
+Através da tag forms, nós criamos linhas de questionário para captação de
+dados, também colocando class dentro da tag forms para posteriormente 
+fazermos ela interagir junto com o JavaScript.
+	A div abaixo será aonde aparecerá os cadastros já enviados, da 
+mesma forma a class "resultado"	é utilizada para fazer a ligação com o 
+JavaScript.
+
+--------------------------------------------------------------------------
+# JAVASCRIPT
+
+Aqui por ser mais complexo, ao invés de fazer um comentário no final, vou
+comentando parte a parte do código
+
+function meuEscopo() {
+    const form = document.querySelector('.form');
+    const resultado = document.querySelector('.resultado');
+
+    const pessoas = [];
+
+/*Aqui nós conectamos o formulário e a div do html com variáveis do
+JavaScript. o array criado será utilizado posteriormente*/
+
+	function recebeEventoForm (evento) {
+	    evento.preventDefault();
+
+    	    const nome = form.querySelector('.nome');
+	    const sobrenome = form.querySelector('.sobrenome');
+    	    const peso = form.querySelector('.peso');
+            const altura = form.querySelector('.altura');
+
+/*Nesta função a variável evento refere-se a ação do envio do formulário,
+a função preventDefault(); é responsável por não fazer os dados sumirem
+da tela após o envio do formulário. logo abaixo estamos jogando os dados
+do formulário para dentro de objetos.*/
+
+	pessoas.push({
+	    nome: nome.Value,
+            sobrenome: sobrenome.Value,
+            peso: peso.value,
+            altura: altura.value
+        });
+
+	console.log(pessoas);
+
+/*Aqui basicamente usamos a função push para colocarmos os objetos, com
+os dados de cada cadastro para dentro de um array e logo após 
+apresentado no console*/
+
+	resultado.innerHTML += `<p>${nome.value} ${sobrenome.value} |
+ 	${peso.value}KG. | ${altura.value}cm</p>`
+    }
+    
+form.addEventListener('submit', recebeEventoForm);
+
+}
+meuEscopo();
+
+/*Nesta parte final do código usamos o innerHTML para printar na tela o 
+valor do objeto de cada dado abaixo do formulário na div "resultado".
+a função addEvenlistener é um como se fosse um vigia aonde sempre que 
+o botão enviar(submit) for acionado, ele ativa a função recebeEventoForm*/
+
+--------------------------------------------------------------------------

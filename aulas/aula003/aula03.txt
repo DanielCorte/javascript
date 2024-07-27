@@ -1,0 +1,12 @@
+/* ";" em JavaScript é opcional */
+
+console.log('Hello World!'); // String = Texto
+console.log("Daniel 'Corte'"); // Aspas duplas
+console.log('Daniel "Corte"'); // Aspas simples
+console.log(`"Daniel" 'Corte'`); // Crase
+
+console.log(35, 15.85) // Number = números
+
+/* Diferente do Python, em JavaScript não existe
+diferença entre números inteiros e números
+flutuantes, todos tem a mesma definição: "Number"*/ 

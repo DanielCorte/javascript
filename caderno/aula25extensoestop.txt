@@ -1,0 +1,7 @@
+EXTENSÕES TOPS VSCODE:
+
+* Live Preview
+* Material Icon Theme
+* Code Time
+* Dracula Official
+* Code Runner

@@ -1,0 +1,66 @@
+O exercício dessa aula é fazer aparecer na página as seguintes infos:
+
+O seu nome é: X
+Seu nome tem X letras
+A segunda letra do seu nome é: X
+Qual o primeiro índice da letra A no seu nome: X
+Qual o último índice da letra a no seu nome: X
+As últimas 3 letras do seu nome são: XXX
+As palavras do seu nome são: X,X,X
+Seu nome com letras maiúsculas: X,X,X
+Seu nome com letras minúsculas: x,x,x
+
+--------------------------------------------------------------------------
+MINHA FORMA DE FAZER: 
+
+const nome = prompt("Digite seu nome completo: ")
+document.body.innerHTML += `O seu nome é: <strong>${nome}</strong> <br />`
+
+const nameLength = nome.length;
+document.body.innerHTML += `Seu nome tem <strong>${nameLength}</strong>  letras <br />`
+
+const secondWord = nome[1]; 
+document.body.innerHTML += `A segunda letra do seu nome é: <strong>${secondWord} <br />`
+
+const firstA = nome.search(/a/);
+document.body.innerHTML += `Qual o primeiro índice da letra A no seu nome: <strong>${firstA}</strong>  <br />`
+
+const lastA = nome.lastIndexOf('a');
+document.body.innerHTML += `Qual o último índice da letra a no seu nome: <strong>${lastA}</strong>  <br />`
+
+const lastThree = nome.slice(-3);
+document.body.innerHTML += `As últimas 3 letras do seu nome são: <strong>${lastThree}</strong> <br />`
+
+const wordsName = nome.split(" ")
+document.body.innerHTML += `As palavras do seu nome são: <strong>${wordsName}</strong> <br />`
+
+const upperWords = nome.toUpperCase("")
+document.body.innerHTML += `Seu nome com letras maiúsculas: <strong>${upperWords}</strong> <br />`
+
+const lowerWords = nome.toLowerCase("")
+document.body.innerHTML += `Seu nome com letras minúsculas: <strong>${lowerWords}</strong> <br />`
+
+--------------------------------------------------------------------------
+FORMA DO PROFESSOR DE FAZER: 
+
+
+const nome = prompt("Digite seu nome completo: ")
+document.body.innerHTML += `O seu nome é: <strong>${nome}</strong> <br />`
+
+document.body.innerHTML += `Seu nome tem <strong>${nome.length}</strong>  letras <br />`
+
+document.body.innerHTML += `A segunda letra do seu nome é: <strong>${nome[1]} <br />`
+
+document.body.innerHTML += `Qual o primeiro índice da letra A no seu nome: <strong>${nome.indexOf('o')}</strong>  <br />`
+
+document.body.innerHTML += `Qual o último índice da letra a no seu nome: <strong>${nome.lastIndexOf('a')}</strong>  <br />`
+
+document.body.innerHTML += `As últimas 3 letras do seu nome são: <strong>${nome.slice(-3, nome.length)}</strong> <br />`
+
+document.body.innerHTML += `As palavras do seu nome são: <strong>${nome.split(" ")}</strong> <br />`
+
+document.body.innerHTML += `Seu nome com letras maiúsculas: <strong>${nome.toUpperCase()}</strong> <br />`
+
+document.body.innerHTML += `Seu nome com letras minúsculas: <strong>${nome.toLowerCase()}</strong> <br />`
+
+--------------------------------------------------------------------------

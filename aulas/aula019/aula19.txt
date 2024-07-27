@@ -1,0 +1,77 @@
+EXERCÍCIO CONECTANDO JAVASCRIPT E HTML:
+
+Fazemos essa conexão usando a função do javascript "getElementById" na 
+qual ela importa um id de html para javascript, fazendo essa ponte, dessa
+forma o que for atribuído a esse id em javascript será levado até o seu id
+em html.
+E para linkarmos os dois arquivos, dentro do html usamos a tag
+<script src=""></script>.
+--------------------------------------------------------------------------
+JAVASCRIPT:
+
+const numero = Number(prompt('Digite um número:'));
+
+const numeroTitulo = document.getElementById('numero-titulo');
+const raizQuadrada = document.getElementById('raiz-quadrada');
+const numeroInteiro = document.getElementById('numero-inteiro');
+const numeroVerdadeiro = document.getElementById('numero-verdadeiro');
+const arredondamentoCima = document.getElementById('arredondando-cima');
+const arredondamentoBaixo = document.getElementById('arredondando-baixo');
+const simplificacaoNumero = document.getElementById('simplificação-numero');
+const notNumber = document.getElementById('not-a-number');
+
+numeroTitulo.innerHTML = numero;
+raizQuadrada.innerHTML = `${numero ** 0.5}`;
+numeroInteiro.innerHTML = `${numero} é inteiro: ${Number.isSafeInteger(numero)}`;
+numeroVerdadeiro.innerHTML = `${Number.isNaN(numero)}</p>`;
+arredondamentoBaixo.innerHTML = `${Math.floor(numero)}</p>`;
+arredondamentoCima.innerHTML = `${Math.ceil(numero)}`;
+simplificacaoNumero.innerHTML = `${numero.toFixed(2)}`;
+
+if (Number.isNaN(numero) == true){
+    notNumber.innerHTML = 'NaN = "Not a Number": Você digitou um valor não correspondente a um número'
+}
+
+--------------------------------------------------------------------------
+HTML:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="script" href="ex/script.js">
+</head>
+<body>
+    <header>
+
+        <!--Número do título-->
+        <h1>O seu número é <span id="numero-titulo">0</span></h1>
+
+        <!--Raiz quadrada do número-->
+        <h2>Raiz quadrada: <span id="raiz-quadrada">00</span></h2>
+
+        <!--O número é inteiro?-->
+        <h2> <span id="numero-inteiro">maybe</span></h2>
+
+        <!--É um  falso número?-->
+        <h2>É NaN: <span id="numero-verdadeiro">maybe</span></h2>
+
+        <!--O número arredondado para baixo-->
+        <h2>Arredondamento para baixo: <span id="arredondando-baixo">00</span></h2>
+
+        <!--O número arredondado para cima-->
+        <h2>Arredondando para cima: <span id="arredondando-cima">00.00</span></h2>
+
+        <!--O número com apenas duas casas decimais-->
+        <h2>Com duas casas decimais: <span id="simplificação-numero">00.00</span></h2>
+
+        <h3><span id="not-a-number"></span></h3>
+    </header>
+
+    <script src="ex/script.js"></script>
+</body>
+</html>
+
+--------------------------------------------------------------------------
